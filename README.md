@@ -81,14 +81,6 @@ Applying advanced causal inference methods to estimate treatment effects in digi
 
 ---
 
-## Tools & Packages
-
-- R and RStudio for data analysis and modeling  
-- Libraries: `MatchIt`, `Synth`, `rdrobust`, `ggplot2`, `dplyr`, `plm`  
-- Export via **`rmarkdown::render()`** to PDF using `knitr`  
-
----
-
 ## Purpose
 
 These assignments build up a progression of causal thinking — from interpreting experimental data correctly to using powerful non-experimental methods for real-world data.  
