@@ -6,7 +6,7 @@ Across the four assignments, we explore the effectiveness of platform incentives
 
 ---
 
-## Assignment 1 – Reddit Gold & Balsakhi Tutoring Program
+## 01_Rmarkdown – Reddit Gold & Balsakhi Tutoring Program
 
 This assignment evaluates two separate experiments. First, we investigate whether receiving **Reddit Gold** increases user activity on the platform. We compare control and treatment groups across various metrics and use linear regression and interaction analysis to measure treatment effects and heterogeneity. The analysis concludes that receiving Reddit Gold significantly increases posting behavior, especially among first-time posters.
 
@@ -14,7 +14,7 @@ The second part analyzes the **Balsakhi program**, a supplemental education inte
 
 ---
 
-## Assignment 2 – Star Digital Display Ad Effectiveness
+## 02_Rmarkdown – Star Digital Display Ad Effectiveness
 
 This case centers around **Star Digital's large-scale randomized online ad campaign**. Our goal was to determine whether display advertising affects purchase behavior, whether ad frequency matters, and which ad platforms provide the best ROI.
 
@@ -22,7 +22,7 @@ Using logistic regression, we found suggestive (though not strongly significant)
 
 ---
 
-## Assignment 3 – Sponsored Search Ads at Bazaar.com
+## 03_Rmarkdown – Sponsored Search Ads at Bazaar.com
 
 This assignment analyzes a **natural experiment**: a technical glitch that caused Bazaar.com’s sponsored Google ads to disappear for several weeks. We use this “accidental” pause to estimate the true ROI of branded search ads.
 
@@ -30,7 +30,7 @@ Using a **Difference-in-Differences** (DiD) approach, I compare traffic trends a
 
 ---
 
-## Assignment 4 – Advanced Causal Methods
+## 04_Rmarkdown – Advanced Causal Methods
 
 This assignment showcases three advanced causal techniques across different industries:
 
