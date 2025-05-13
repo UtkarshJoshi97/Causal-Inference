@@ -1,90 +1,46 @@
-# Causal Inference Assignments – MSBA 6441
+# MSBA 6441 – Causal Inference Assignments
 
-This repository contains a series of four causal inference assignments for the MSBA 6441 course.  
-Each assignment is rendered as a PDF via **R Markdown** using the **`knit` function in RStudio**, following a clean and reproducible workflow.  
-The `.Rmd` files were exported into PDF format and are labeled as `01`, `02`, `03`, and `04` respectively.
+Welcome to this repository for MSBA 6441, which includes four hands-on assignments tackling causal inference problems using real-world data and a variety of experimental and quasi-experimental methods. All work was done using **R Markdown** and rendered into PDF reports, combining both rigorous statistical analysis and clear communication of results.
 
-These assignments span a broad set of real-world causal inference problems, utilizing both experimental and quasi-experimental methods for estimation.
+Across the four assignments, we explore the effectiveness of platform incentives, digital advertising, search engine marketing, public policy, and auction mechanisms. The techniques applied span from basic t-tests and linear models to advanced methods like Difference-in-Differences, Propensity Score Matching, Synthetic Control, and Regression Discontinuity Designs.
 
 ---
 
-## 📂 Assignment Summaries
+## Assignment 1 – Reddit Gold & Balsakhi Tutoring Program
+
+This assignment evaluates two separate experiments. First, we investigate whether receiving **Reddit Gold** increases user activity on the platform. We compare control and treatment groups across various metrics and use linear regression and interaction analysis to measure treatment effects and heterogeneity. The analysis concludes that receiving Reddit Gold significantly increases posting behavior, especially among first-time posters.
+
+The second part analyzes the **Balsakhi program**, a supplemental education intervention in Indian public schools. Using pre/post test scores and randomized treatment allocation, we assess whether the intervention improves performance in math and language. Statistical tests confirm improvement in both areas post-intervention, and we evaluate the validity of causal assumptions including SUTVA.
 
 ---
 
-### 📄 01 Rmarkdown — *Reddit Gold & Balsakhi Education Program*  
-**Use Case:**  
-Evaluating whether digital rewards (Reddit Gold) and educational interventions (Balsakhi tutoring) causally influence behavior and learning outcomes.
+## Assignment 2 – Star Digital Display Ad Effectiveness
 
-**Key Questions:**  
-- Does receiving Reddit Gold increase content posting?
-- Are treatment and control groups balanced pre-intervention?
-- Did the Balsakhi program improve test scores in math and language?
+This case centers around **Star Digital's large-scale randomized online ad campaign**. Our goal was to determine whether display advertising affects purchase behavior, whether ad frequency matters, and which ad platforms provide the best ROI.
 
-**Techniques Used:**  
-- **Welch's t-tests** to assess group balance and treatment effects  
-- **Simple linear regression** for outcome modeling  
-- **Interaction analysis** to identify subgroups affected  
-- **Randomized experiment analysis** under SUTVA assumptions
+Using logistic regression, we found suggestive (though not strongly significant) evidence that advertising impacts purchase likelihood. However, the interaction between **ad exposure frequency** and purchase probability was highly significant, suggesting that repeated exposure strengthens ad effectiveness. We also compared ad platforms (Sites 1–5 vs. Site 6) by calculating **cost-per-conversion**, ultimately recommending a blended strategy to balance reach and efficiency.
 
 ---
 
-### 📄 02 Rmarkdown — *Star Digital Display Advertising*  
-**Use Case:**  
-Measuring the causal effect of online display ads on purchase behavior, accounting for ad frequency and platform allocation.
+## Assignment 3 – Sponsored Search Ads at Bazaar.com
 
-**Key Questions:**  
-- Does exposure to digital ads increase purchases?
-- Is there a frequency effect (more impressions → more conversions)?
-- Which advertising sites yield the most efficient ROI?
+This assignment analyzes a **natural experiment**: a technical glitch that caused Bazaar.com’s sponsored Google ads to disappear for several weeks. We use this “accidental” pause to estimate the true ROI of branded search ads.
 
-**Techniques Used:**  
-- **Logistic regression** for binary outcomes (purchase likelihood)  
-- **Interaction terms** to examine ad frequency effects  
-- **Cost-per-conversion calculations** to compare ad platform efficiency  
-- **Power testing** to verify statistical adequacy of the sample
+Using a **Difference-in-Differences** (DiD) approach, I compare traffic trends across search platforms (Google as treatment; Bing, Yahoo, Ask as controls). The analysis reveals a **67% drop in total branded traffic** post-interruption, showing that ads were indeed driving substantial incremental visits—not just cannibalizing organic clicks. This sharply contrasts with a naive ROI estimate that overstates ad value, highlighting the importance of **causal methods in marketing analytics**.
 
 ---
 
-### 📄 03 Rmarkdown — *Sponsored Search Ads at Bazaar.com*  
-**Use Case:**  
-Evaluating the true return on investment (ROI) of branded search ads using a real-world natural experiment.
+## Assignment 4 – Advanced Causal Methods
 
-**Key Questions:**  
-- Did suspending Google ads lead to a meaningful change in traffic?
-- How does the ROI change under causal vs naïve estimation?
-- Were the pre-treatment trends parallel across platforms?
+This assignment showcases three advanced causal techniques across different industries:
 
-**Techniques Used:**  
-- **Difference-in-Differences (DiD)** for causal effect estimation  
-- **Panel data modeling (fixed effects)** to control for unobserved heterogeneity  
-- **Parallel trends testing** to validate DiD assumptions  
-- **Log-transformation** to address skewness in traffic data
+- **Propensity Score Matching (PSM)** was used to estimate the effect of directed search on retail purchases. After matching users on demographics and behavior, found a strong and statistically significant lift in promoted sales, confirming that intent-driven sessions yield higher conversion.
+  
+- Using the **Synthetic Control Method**, evaluated California’s **cigarette tax policy**. By constructing a counterfactual “synthetic California,” assessed whether sales declined more than expected post-policy. The results validated the policy’s effectiveness in reducing cigarette consumption.
+  
+- Finally, applied a **Regression Discontinuity Design (RDD)** to online auction data. We assessed whether **ad position rank** influences click-through rates, exploiting the cutoff between rank 1 and 2. The analysis confirmed a clear jump in engagement for top-ranked ads, reinforcing the value of premium placement.
 
 ---
 
-### 📄 04 Rmarkdown — *Advanced Causal Methods: Matching, Synthetic Control & RDD*  
-**Use Case:**  
-Applying advanced causal inference methods to estimate treatment effects in digital commerce, public policy, and ad auctions.
-
-**Key Questions:**  
-- Does directed search lead to higher sales in e-commerce?
-- What was the impact of California’s cigarette tax policy?
-- Does ad rank in online auctions influence click-through rate?
-
-**Techniques Used:**  
-- **Propensity Score Matching (PSM)** with caliper and covariate balance checks  
-- **Log-linear regression** for percentage interpretation  
-- **Synthetic Control Method** to construct a credible counterfactual  
-- **Regression Discontinuity Design (RDD)** with sharp cutoff interpretation  
-- **Causal assumptions** reviewed and validated for each technique
-
----
-
-## Purpose
-
-These assignments build up a progression of causal thinking — from interpreting experimental data correctly to using powerful non-experimental methods for real-world data.  
-Together, they demonstrate how to rigorously establish causality in digital, educational, and policy-oriented environments.
-
----
+📎 All PDFs and code were rendered using R Markdown. The `.Rmd` files and compiled reports are included in this repository.
 
